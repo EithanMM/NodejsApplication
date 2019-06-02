@@ -1,0 +1,41 @@
+{
+  "name": "nodejs-mysql-app",
+  "version": "1.0.0",
+  "description": "Application using Nodejs and Mysql.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EithanMM/NodejsApplication.git"
+  },
+  "keywords": [
+    "nodejs",
+    "code",
+    "beginner"
+  ],
+  "author": "Eithan Mendez Mendez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EithanMM/NodejsApplication/issues"
+  },
+  "homepage": "https://github.com/EithanMM/NodejsApplication#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-mysql-session": "^2.1.0",
+    "express-session": "^1.16.1",
+    "express-validator": "^5.3.1",
+    "morgan": "^1.9.1",
+    "mysql": "^2.17.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "timeago.js": "^4.0.0-beta.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
