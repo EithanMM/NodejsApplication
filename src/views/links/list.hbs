@@ -1,0 +1,22 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each res}} {{!--Loop para recorrer respuestas a consultas--}}
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h3 class="card-title text-uppercase">{{ContactName}}</h3>
+                        </div>
+                    <div class="card-body">
+                        <p class="m-3">{{Description}}</p>
+                        <p class="m-3">{{Cellphone}}</p>
+                        <p class="m-4">{{timeago CreationDate}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="" class="btn btn-danger">Delete Contact</a> {{!--target=".blank (abre el link en otra pestana)"--}}
+                        <a href="" class="btn btn-warning">Edit</a>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

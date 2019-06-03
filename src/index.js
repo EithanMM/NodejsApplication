@@ -12,11 +12,11 @@ app.set('port', process.env.PORT || 3000);
 app.set('views',path.join(__dirname, 'views')); //especifica donde esta la carpeta views dentro de src.
 //se configura un engine, para la usar las plantillas handlebars o cualquier otra (vistas).
 app.engine('.hbs',handlebars({
-    defaultLayout: 'main',
+    defaultLayout: 'main', //archivo .hbm que todas las vista compartiran.
     layoutsDir: path.join(app.get('views'), 'layouts'), //une los directorios 'views' y 'layouts'.
     partialsDir: path.join(app.get('views'), 'partials'),
     extname: '.hbs',//determino como reconocer las extensiones .handlebars
-    helpers: require('./lib/handlebars')
+    helpers: require('./lib/handlebars') //servira para el uso de helpers en las vistas.
 }));
 
 //aplica las configuraciones creadas anteriormente.
