@@ -1,22 +1,33 @@
 <div class="container p-4">
-    <div class="row">
-        {{#each res}} {{!--Loop para recorrer respuestas a consultas--}}
-            <div class="col-md-3">
-                <div class="card text-center">
-                    <div class="card-header">
-                        <h3 class="card-title text-uppercase">{{ContactName}}</h3>
-                        </div>
-                    <div class="card-body">
-                        <p class="m-3">{{Description}}</p>
-                        <p class="m-3">{{Cellphone}}</p>
-                        <p class="m-4">{{timeago CreationDate}}</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="" class="btn btn-danger">Delete Contact</a> {{!--target=".blank (abre el link en otra pestana)"--}}
-                        <a href="" class="btn btn-warning">Edit</a>
-                    </div>
-                </div>
-            </div>
-        {{/each}}
-    </div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Contact Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Cellphone</th>
+                <th scope="col">Creation Date</th>
+                <th scope="col" colspan="10" align="center"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each res}} {{!--Loop para recorrer respuestas a consultas--}}
+                <tr>
+                    <td><strong>{{ContactName}}</strong></td>
+                    <td><strong>{{Description}}</strong></td>
+                    <td><strong>{{Cellphone}}</strong></td>
+                    <td><strong>{{timeago CreationDate}}</strong></td>
+                    <td><a href="/links/delete/{{PK_IdContact}}" class="btn btn-danger"><i class="far fa-trash-alt"></i> Delete</a></td>
+                    <td><a href="/links/modify/{{PK_IdContact}}" class="btn btn-warning"><i class="far fa-edit"></i> Edit</a></td>
+                </tr>
+                {{else}}
+                    <tr>
+                        <td align="center"><div class="alert alert-warning" role="alert">
+                            <i class="fas fa-exclamation-circle"></i><strong> You dont have any contacts yet.</strong>
+                            <a href="/links/add" class="btn btn-success">Add one!</a></div>
+                        </td>
+                    </tr>
+            {{/each}}
+        </tbody>
+    </table>
 </div>
+

@@ -1,0 +1,29 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h2>
+                        <p>Modify Contact</p>
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <form action="/links/modify/{{contact.PK_IdContact}}" method="POST">
+                        <div class="form-group">
+                            <input type="text" value="{{contact.ContactName}}" class="form-control" name="ContactName" placeholder="Contact Name" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" value="{{contact.Cellphone}}" class="form-control" name="Cellphone" placeholder="Phone">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" value="{{contact.Description}}" class="form-control" name="Description" placeholder="Description">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">Update Contact</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

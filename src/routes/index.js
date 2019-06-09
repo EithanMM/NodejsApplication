@@ -3,7 +3,7 @@ const express = require('express');
 
 const router = express.Router();
 //Ruta de inicio.
-router.get('/',(error, data) =>{
+router.get('/',(error, data) =>{ //se define una ruta inicial.
     (error == true) ? data.send('<h2>Ops, something went wrong.</h2>') : data.send('<h2>Hello everybody</h2>'); 
 });
 
