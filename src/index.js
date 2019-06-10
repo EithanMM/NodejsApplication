@@ -48,10 +48,12 @@ app.use(passport.session()) //inicializa una session para passport.
 
 
 //GLOBAL VARIBLES
-
 //toma la info del usuario, toma lo que el servidor quiere responder y toma una funcion para continuar con el resto del codigo
 app.use((request, response, next) =>{
     app.locals.success = request.flash('success'); //Se almaceno un mensaje con el codigo 'succces' y lo va a hacer disponible en todas las vistas.
+    app.locals.error = request.flash('error');
+    app.locals.user = request.user; //guarda la informacion del usuario en memoria en la variable 'user'
+    //Users es muy importante para manejar items relacionados a un usuario.
     next();
 });
 

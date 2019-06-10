@@ -15,7 +15,7 @@ DEFAULT CHARSET=utf8;
 DROP TABLE IF EXISTS `json_mysql_db`.`Contact`;
 CREATE TABLE `json_mysql_db`.`Contact`(
     `PK_IdContact`  INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    `FK_User`       INT(11),
+    `FK_User`       INT(11) NOT NULL,
     `ContactName`   VARCHAR(60) NOT NULL,
     `Cellphone`     VARCHAR(20) NOT NULL,
     `Description`   VARCHAR(100) NULL,
