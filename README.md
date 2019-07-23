@@ -41,8 +41,7 @@ Se va a utilizar para mostrar mensajes de error o exito
 cuando el usuario realice una operacion.
 
 **express-validator**:
-modulo para validar los datos que el usuario envia desde
-la aplicacion cliente.
+modulo para validar los datos que el usuario envia desde la aplicacion cliente.
 -------------------------------------------------------------------------------
 --------------- Descripcion de las carpetas/archivos --------------------------
 
